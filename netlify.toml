@@ -1,2 +1,3 @@
-[Initializing]
-  command = "npm install --force"
+[build]
+command = "npm install --force && npm run build"
+publish = "build"
