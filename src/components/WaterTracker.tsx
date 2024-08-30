@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import Wavify from 'react-wavify';
 import '../styles/waterTracker.styl';
 
 interface WaterTrackerProps {
@@ -42,7 +43,6 @@ const WaterTracker: React.FC<WaterTrackerProps> = ({ glassSize, dailyGoal }) => 
 
     const resetWater = () => {
         setWaterAmount(0);
-
         localStorage.setItem(
             'waterData',
             JSON.stringify({ date: getCurrentDate(), amount: 0 })
@@ -50,6 +50,7 @@ const WaterTracker: React.FC<WaterTrackerProps> = ({ glassSize, dailyGoal }) => 
     };
 
     const waterHeight = Math.min((waterAmount / dailyGoal) * 100, 100);
+    const isGoalReached = waterAmount >= dailyGoal;
 
     return (
         <div className="water-tracker">
@@ -59,7 +60,37 @@ const WaterTracker: React.FC<WaterTrackerProps> = ({ glassSize, dailyGoal }) => 
 
             <div className="glass-container">
                 <div className="glass">
-                    <div className="water" style={{ height: `${waterHeight}%` }} />
+                    {isGoalReached ? (
+                        <div
+                            className="water-filled"
+                            style={{
+                                backgroundColor: '#4a90e2',
+                                position: 'absolute',
+                                bottom: 0,
+                                height: '100%',
+                                width: '100%',
+                                transition: 'height 0.5s ease-in-out',
+                            }}
+                        />
+                    ) : (
+                        <Wavify
+                            fill="#4a90e2"
+                            paused={false}
+                            options={{
+                                height: 10,
+                                amplitude: 6,
+                                speed: 0.15,
+                                points: 3
+                            }}
+                            style={{
+                                position: 'absolute',
+                                bottom: 0,
+                                height: `${waterHeight}%`,
+                                width: '100%',
+                                transition: 'height 0.5s ease-in-out'
+                            }}
+                        />
+                    )}
                 </div>
             </div>
 

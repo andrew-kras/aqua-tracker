@@ -46,7 +46,8 @@
 
 ## Скриншоты
 
-*Скоро будут*
+![Main Interface](./public/screenshots/dos.png)
+![Settings](./public/screenshots/uno.png)
 
 ## Планируемые улучшения
 
