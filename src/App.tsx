@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import WaterTracker from './components/WaterTracker';
+import './styles/index.styl';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    const [glassSize, setGlassSize] = useState<number>(250);
+    const [dailyGoal, setDailyGoal] = useState<number>(2000);
+
+    useEffect(() => {
+        const savedGoal = localStorage.getItem('dailyGoal');
+        if (savedGoal) {
+            setDailyGoal(parseInt(savedGoal, 10));
+        }
+    }, []);
+
+    return (
+        <div>
+            <Header />
+            <main style={{ padding: '20px', marginBottom: '60px' }}>
+                <WaterTracker glassSize={glassSize} dailyGoal={dailyGoal} />
+            </main>
+            <Footer setGlassSize={setGlassSize} setDailyGoal={setDailyGoal} dailyGoal={dailyGoal} />
+        </div>
+    );
+};
 
 export default App;

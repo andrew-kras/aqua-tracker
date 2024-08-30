@@ -1,0 +1,132 @@
+.modal-overlay
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color rgba(0, 0, 0, 0.5)
+  display flex
+  justify-content center
+  align-items center
+  z-index 1000
+
+.modal
+  background-color white
+  padding 20px
+  border-radius 8px
+  width 300px
+  max-width 80%
+  box-shadow 0 2px 10px rgba(0, 0, 0, 0.1)
+  display flex
+  flex-direction column
+  align-items center
+
+.modal-header
+  margin-bottom 20px
+  text-align center
+
+.modal-header h2
+  color #357ab8
+  margin 0
+
+.modal-content
+  width 100%
+  display flex
+  flex-direction column
+  align-items flex-start
+
+.language-settings
+  margin-bottom 20px
+  display flex
+  flex-direction column
+  align-items flex-start
+
+.language-label
+  margin-bottom 5px
+  font-size 16px
+  color #357ab8
+
+.language-select
+  width 100%
+  padding 8px
+  font-size 16px
+  border-radius 4px
+  border 1px solid #ddd
+  color #4a90e2
+  background-color white
+  cursor pointer
+
+.language-select:focus
+  outline none
+  border-color #4a90e2
+
+.glass-size-settings
+  margin-bottom 20px
+  display flex
+  flex-direction column
+  align-items flex-start
+
+.glass-size-label
+  margin-bottom 5px
+  font-size 16px
+  color #357ab8
+
+.glass-size-input
+  width 100%
+  padding 8px
+  font-size 16px
+  border-radius 4px
+  border 1px solid #ddd
+  color #4a90e2
+  background-color white
+  cursor pointer
+
+.glass-size-input:focus
+  outline none
+  border-color #4a90e2
+
+.daily-goal-settings
+  margin-bottom 20px
+  display flex
+  flex-direction column
+  align-items flex-start
+
+.daily-goal-label
+  margin-bottom 5px
+  font-size 16px
+  color #357ab8
+
+.daily-goal-input
+  width 100%
+  padding 8px
+  font-size 16px
+  border-radius 4px
+  border 1px solid #ddd
+  color #4a90e2
+  background-color white
+  cursor pointer
+
+.daily-goal-input:focus
+  outline none
+  border-color #4a90e2
+
+.close-button
+  background-color #4a90e2
+  color white
+  border none
+  padding 10px 20px
+  cursor pointer
+  font-size 16px
+  border-radius 4px
+  margin-top 10px
+
+.close-button:disabled
+  background-color #ccc
+  cursor not-allowed
+
+.close-button:disabled:hover
+  background-color #ccc
+  cursor not-allowed
+
+.close-button:hover
+  background-color #357ab8

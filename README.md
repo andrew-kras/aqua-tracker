@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# AquaTracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**AquaTracker** — это простое веб-приложение, которое помогает вам отслеживать количество выпитой воды в течение дня. Приложение сохраняет объем выпитой воды в локальном хранилище браузера и позволяет легко изменять язык интерфейса и объем стакана, используемого для трекинга.
 
-## Available Scripts
+## Технологии
 
-In the project directory, you can run:
+Проект разработан с использованием следующих технологий:
 
-### `npm start`
+- **React** - библиотека для создания пользовательских интерфейсов.
+- **TypeScript** - надмножество JavaScript, добавляющее статическую типизацию.
+- **Stylus** - CSS-препроцессор для написания стилей.
+- **i18next** - библиотека для международной локализации в приложениях.
+- **React Icons** - библиотека для использования иконок в приложении.
+- **Local Storage** - используется для сохранения данных о выпитой воде на стороне клиента.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Установка и запуск
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Следуйте инструкциям ниже для локального запуска проекта:
 
-### `npm test`
+1. Склонируйте репозиторий на ваш локальный компьютер:
+   ```bash
+   git clone https://github.com/ваш-username/aquatracker.git
+   ```
+   
+2. Перейдите в директорию проекта:
+    ```bash
+    cd pomodoro-react
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Установите зависимости:
+    ```bash
+    npm install
+    ```
 
-### `npm run build`
+4. Запустите проект:
+    ```bash
+    npm start
+    ```
+## Возможности
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Отслеживание объема выпитой воды** - добавляйте количество выпитой воды в течение дня с помощью кнопки "Add".
+- **Сохранение данных** - объем выпитой воды сохраняется в Local Storage, чтобы данные не терялись при перезагрузке страницы. В полночь счетчик сбрасывается.
+- **Изменение объема стакана** - настройте объем стакана по умолчанию через меню настроек.
+- **Международная локализация** - переключайте язык интерфейса между русским и английским языками.
+- **Ссылка на GitHub** - в футере приложения находится ссылка на мой профиль GitHub.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Скриншоты
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*Скоро будут*
 
-### `npm run eject`
+## Планируемые улучшения
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Уведомления** - добавление уведомлений для напоминания о необходимости выпить воду.
+- **Аналитика** - отображение статистики выпитой воды за неделю/месяц (будет реализовано с помощью серверной части на python и api).
+- **Рефакторинг кода** - провести рефакторинг стилий в коде. Во время разработки автор положил на это болт.
+- **Добавление комментариев в код** - добавить комментарии для лучшей читаемости кода.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Контрибьюции
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Если у вас есть идеи по улучшению AquaTracker, пожалуйста, создавайте pull-request или открывайте issue.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Использование
 
-## Learn More
+Этот проект открыт для всех и может быть использован любым желающим.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Автор
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Создано для изучения React и TypeScript. Автор: [Andrew Kras](https://github.com/andrew-kras/)

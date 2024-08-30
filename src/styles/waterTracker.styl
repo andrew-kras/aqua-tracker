@@ -1,0 +1,53 @@
+.water-tracker
+  display flex
+  flex-direction column
+  align-items center
+
+.glass-container
+  width 100px
+  height 200px
+  position relative
+  border 3px solid #357ab8
+  border-radius 10px
+  overflow hidden
+  margin-bottom 20px
+
+.glass
+  width 100%
+  height 100%
+  position relative
+
+.water
+  background-color #4a90e2
+  width 100%
+  position absolute
+  bottom 0
+  transition height 0.5s ease-in-out
+
+button
+  background-color #4a90e2
+  color white
+  border none
+  padding 10px 20px
+  cursor pointer
+  font-size 16px
+  border-radius 4px
+  margin-top 10px
+
+button:hover
+  background-color #357ab8
+
+.reset-button
+  margin-top 5px
+  background-color #e74c3c
+
+.reset-button:hover
+  background-color #c0392b
+
+.reset-button:disabled
+  background-color #ccc
+  cursor not-allowed
+
+.reset-button:disabled:hover
+  background-color #ccc
+  cursor not-allowed
