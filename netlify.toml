@@ -1,0 +1,3 @@
+[build]
+  command = "npm install --legacy-peer-deps && react-app-rewired build"
+  publish = "build"
